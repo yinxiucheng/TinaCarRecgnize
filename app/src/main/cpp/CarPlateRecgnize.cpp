@@ -151,6 +151,10 @@ string CarPlateRecgnize::plateRecgnize(Mat src) {
             charVec.push_back(rect);
         }
     }
+
+    if(charVec.size() == 0){//检测异常
+        return "";
+    }
     //集合中仍然会存在 非字符矩形
     //对集合中的矩形按照x进行一下排序，保证它们是从左到右的顺序
     sort(charVec.begin(), charVec.end(), [](const Rect &r1, const Rect &r2) {

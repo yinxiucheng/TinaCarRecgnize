@@ -35,5 +35,8 @@ Java_tina_com_recgnize_MainActivity_recgnizeCar(JNIEnv *env, jobject instance, j
     env->ReleaseStringUTFChars(hogAnnData_, hogAnnData);
     env->ReleaseStringUTFChars(imgStr_, imgStr);
 
+    if (reslt.empty()){
+        return env->NewStringUTF(NULL);
+    }
     return env->NewStringUTF(reslt.c_str());
 }

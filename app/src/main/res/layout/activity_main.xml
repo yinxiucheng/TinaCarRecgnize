@@ -7,10 +7,29 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/btn"
+        android:id="@+id/btn2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp"
+        android:text="选择图片"
+        android:onClick="imageLoader"/>
+
+    <TextView
+        android:id="@+id/imgPath"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp"
+        android:text="imgPath" />
+
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="50dp"
         android:text="车牌识别"
@@ -23,6 +42,6 @@
         android:gravity="center_horizontal"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="50dp"
-        android:text="Hello World!" />
+        android:text="车牌号：" />
 
 </LinearLayout>
